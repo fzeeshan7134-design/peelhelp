@@ -1,0 +1,160 @@
+.site-footer {
+  --footer-maroon: #71404a;
+  --footer-dusty-rose: #a66d73;
+  --footer-brown: #7a5a4e;
+  --footer-cream: #f8f1f2;
+
+  padding: 0 32px 28px;
+  background: var(--footer-cream);
+  color: var(--footer-brown);
+}
+
+/* DASHED LINE AT TOP */
+
+.site-footer__top-line {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+  border-top: 1px dashed #bfa5aa;
+}
+
+/* MAIN FOOTER */
+
+.site-footer__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 55px 20px 48px;
+
+  text-align: center;
+}
+
+/* LOGO */
+
+.site-footer__logo {
+  display: block;
+
+  width: 115px;
+  height: auto;
+
+  margin-bottom: 20px;
+
+  object-fit: contain;
+}
+
+/* TITLE */
+
+.site-footer__title {
+  margin: 0;
+
+  color: var(--footer-maroon);
+
+  font-size: 1.25rem;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+}
+
+/* TAGLINE */
+
+.site-footer__tagline {
+  max-width: 500px;
+
+  margin: 10px 0 25px;
+
+  color: #806f72;
+
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* INSTAGRAM */
+
+.site-footer__instagram {
+  display: grid;
+
+  width: 46px;
+  height: 46px;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.site-footer__instagram img {
+  display: block;
+
+  width: 32px;
+  height: 32px;
+
+  object-fit: contain;
+}
+
+.site-footer__instagram:hover {
+  background: rgba(166, 109, 115, 0.12);
+  transform: translateY(-3px);
+}
+
+/* BOTTOM DIVIDER */
+
+.site-footer__bottom-line {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+
+  border-top: 1px solid #dfcfd2;
+}
+
+/* BOTTOM */
+
+.site-footer__bottom {
+  display: flex;
+
+  width: min(100%, 1280px);
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  margin: 0 auto;
+  padding-top: 22px;
+
+  color: #927f82;
+
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.site-footer__bottom p {
+  margin: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .site-footer__main {
+    padding: 45px 10px 40px;
+  }
+
+  .site-footer__logo {
+    width: 100px;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 8px;
+  }
+}
