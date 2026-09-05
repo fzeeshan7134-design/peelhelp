@@ -4,7 +4,7 @@
   --footer-brown: #7a5a4e;
   --footer-cream: #f8f1f2;
 
-  padding: 0 32px 28px;
+  padding: 0 32px 18px;
   background: var(--footer-cream);
   color: var(--footer-brown);
 }
@@ -24,7 +24,7 @@
   flex-direction: column;
   align-items: center;
 
-  padding: 55px 20px 48px;
+  padding: 35px 20px 30px;
 
   text-align: center;
 }
@@ -34,10 +34,10 @@
 .site-footer__logo {
   display: block;
 
-  width: 115px;
+  width: 85px;
   height: auto;
 
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 
   object-fit: contain;
 }
@@ -49,7 +49,7 @@
 
   color: var(--footer-maroon);
 
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 750;
   letter-spacing: 0.02em;
 }
@@ -59,12 +59,12 @@
 .site-footer__tagline {
   max-width: 500px;
 
-  margin: 10px 0 25px;
+  margin: 8px 0 16px;
 
   color: #806f72;
 
-  font-size: 0.92rem;
-  line-height: 1.6;
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 /* INSTAGRAM */
@@ -72,8 +72,8 @@
 .site-footer__instagram {
   display: grid;
 
-  width: 46px;
-  height: 46px;
+  width: 40px;
+  height: 40px;
 
   place-items: center;
 
@@ -87,15 +87,15 @@
 .site-footer__instagram img {
   display: block;
 
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
 
   object-fit: contain;
 }
 
 .site-footer__instagram:hover {
   background: rgba(166, 109, 115, 0.12);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 /* BOTTOM DIVIDER */
@@ -120,11 +120,11 @@
   gap: 20px;
 
   margin: 0 auto;
-  padding-top: 22px;
+  padding-top: 15px;
 
   color: #927f82;
 
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
@@ -142,11 +142,31 @@
   }
 
   .site-footer__main {
-    padding: 45px 10px 40px;
+    padding: 30px 10px 28px;
   }
 
   .site-footer__logo {
-    width: 100px;
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .site-footer__title {
+    font-size: 1rem;
+  }
+
+  .site-footer__tagline {
+    font-size: 0.8rem;
+    margin: 7px 0 14px;
+  }
+
+  .site-footer__instagram {
+    width: 38px;
+    height: 38px;
+  }
+
+  .site-footer__instagram img {
+    width: 26px;
+    height: 26px;
   }
 
   .site-footer__bottom {
@@ -155,6 +175,6 @@
 
     text-align: center;
 
-    gap: 8px;
+    gap: 6px;
   }
 }

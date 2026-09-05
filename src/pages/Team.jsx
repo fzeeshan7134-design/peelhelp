@@ -61,6 +61,11 @@ const executives = [
     position: 'Director of Publicity',
     image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
   },
+  {
+    name: 'Hayley Huang',
+    position: 'Director of Publicity',
+    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+  },
 ]
 
 function Team() {
