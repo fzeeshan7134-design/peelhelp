@@ -5,6 +5,8 @@ import './Footer.css'
 
 const INSTAGRAM_URL = 'https://www.instagram.com/helpinghandsofpeel/'
 
+const ACCESS_KEY = '8fce80ef-832b-4a7e-bdb2-b4fd89b6d736'
+
 function Footer() {
   const [formData, setFormData] = useState({
     name: '',
@@ -31,17 +33,24 @@ function Footer() {
     setStatus('')
 
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: ACCESS_KEY,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `New Contact Form Message from ${formData.name}`,
+        }),
       })
 
       const data = await response.json()
 
-      if (!response.ok) {
+      if (!data.success) {
         throw new Error(data.message || 'Failed to send message.')
       }
 
