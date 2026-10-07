@@ -1,4 +1,6 @@
 import './Team.css'
+import teamPhoto from '../assets/team-photo.jpg'
+import hariLoukyaaKuppam from '../assets/hari-loukyaa-kuppam.webp'
 
 const executives = [
   {
@@ -29,7 +31,7 @@ const executives = [
   {
     name: 'Hari Loukyaa Kuppam',
     position: 'Director of Logistics',
-    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    image: hariLoukyaaKuppam,
   },
   {
     name: 'Fiona Wang',
@@ -74,7 +76,7 @@ function Team() {
       <section className="team-page__intro" aria-labelledby="team-title">
         <img
           className="team-page__group-photo"
-          src="https://placehold.co/1200x500/e0e0e0/999999?text=Group+Photo"
+          src={teamPhoto}
           alt="Helping Hands of Peel executive team"
         />
 
