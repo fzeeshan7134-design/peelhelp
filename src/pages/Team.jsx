@@ -1,6 +1,8 @@
 import './Team.css'
 import teamPhoto from '../assets/team-photo.jpg'
 import hariLoukyaaKuppam from '../assets/hari-loukyaa-kuppam.webp'
+import fionaWang from '../assets/fiona-wang.webp'
+import harveenKaurSandhu from '../assets/harveen-kaur-sandhu.webp'
 
 const executives = [
   {
@@ -11,7 +13,7 @@ const executives = [
   {
     name: 'Harveen Kaur Sandhu',
     position: 'President',
-    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    image: harveenKaurSandhu,
   },
   {
     name: 'Sophia Liang',
@@ -36,7 +38,7 @@ const executives = [
   {
     name: 'Fiona Wang',
     position: 'Director of Logistics',
-    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    image: fionaWang,
   },
   {
     name: 'Ahan Pandey',
