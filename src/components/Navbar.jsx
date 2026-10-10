@@ -1,11 +1,19 @@
+
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import logo from '../assets/logo.png'
 import insta from '../assets/insta.png'
 import './Navbar.css'
 
-const navItems = ['Home', 'Team', 'Events', 'Gallery', 'Past Events']
+const navItems = [
+  'Home',
+  'Team',
+  'Founders',
+  'Events',
+  'Gallery',
+  'Past Events',
+]
 
 const INSTAGRAM_URL = 'https://www.instagram.com/helpinghandsofpeel/'
 
@@ -25,17 +33,15 @@ function InstagramLink({ className = '' }) {
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const [activeItem, setActiveItem] = useState('Home')
+  const location = useLocation()
 
-  const selectNavItem = (item) => {
-    setActiveItem(item)
+  const selectNavItem = () => {
     setIsOpen(false)
   }
 
   return (
     <header className="site-header">
       <nav className="navbar" aria-label="Main navigation">
-
         {/* Logo → Homepage */}
         <Link className="club-logo" to="/" aria-label="Club home">
           <img src={logo} alt="Club logo" />
@@ -51,15 +57,18 @@ function Navbar() {
                 ? '/'
                 : `/${item.toLowerCase().replace(' ', '-')}`
 
+            const isActive =
+              location.pathname === path ||
+              (item === 'Past Events' &&
+                location.pathname.startsWith('/past-events'))
+
             return (
               <li key={item}>
                 <Link
                   to={path}
-                  className={activeItem === item ? 'is-active' : ''}
-                  aria-current={
-                    activeItem === item ? 'page' : undefined
-                  }
-                  onClick={() => selectNavItem(item)}
+                  className={isActive ? 'is-active' : ''}
+                  aria-current={isActive ? 'page' : undefined}
+                  onClick={selectNavItem}
                 >
                   {item}
                 </Link>
@@ -88,7 +97,6 @@ function Navbar() {
             <Menu aria-hidden="true" />
           )}
         </button>
-
       </nav>
     </header>
   )

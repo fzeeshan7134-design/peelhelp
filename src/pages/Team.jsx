@@ -3,12 +3,21 @@ import teamPhoto from '../assets/team-photo.jpg'
 import hariLoukyaaKuppam from '../assets/hari-loukyaa-kuppam.webp'
 import fionaWang from '../assets/fiona-wang.webp'
 import harveenKaurSandhu from '../assets/harveen-kaur-sandhu.webp'
+import hayleyHuang from '../assets/hayley-huang.webp'
+import sophiaLiang from '../assets/sophia-liang.webp'
+import sahasraSiddabhaktuni from '../assets/sahasra-siddabhaktuni.webp'
+import ridhiGoyal from '../assets/ridhi-goyal.webp'
+import zoeEffiong from '../assets/zoe-effiong.webp'
+import jasmineSharma from '../assets/jasmine-sharma.webp'
+import taliaWatad from '../assets/talia-watad.webp'
+import ahanPandey from '../assets/ahan-pandey.webp'
+import anmolSharma from '../assets/anmol-sharma.webp'
 
 const executives = [
   {
     name: 'Jasmine Sharma',
     position: 'President',
-    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    image: jasmineSharma,
   },
   {
     name: 'Harveen Kaur Sandhu',
@@ -18,17 +27,17 @@ const executives = [
   {
     name: 'Sophia Liang',
     position: 'Vice President',
-    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    image: sophiaLiang,
   },
   {
     name: 'Zoe Effiong',
     position: 'Secretary',
-    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    image: zoeEffiong,
   },
   {
     name: 'Ridhi Goyal',
     position: 'Secretary',
-    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    image: ridhiGoyal,
   },
   {
     name: 'Hari Loukyaa Kuppam',
@@ -43,17 +52,17 @@ const executives = [
   {
     name: 'Ahan Pandey',
     position: 'Director of Logistics',
-    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    image: ahanPandey,
   },
   {
     name: 'Talia Watad',
     position: 'Director of Marketing',
-    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    image: taliaWatad,
   },
   {
     name: 'Sahasra Siddabhaktuni',
     position: 'Director of Marketing',
-    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    image: sahasraSiddabhaktuni,
   },
   {
     name: 'Hannah Mactal',
@@ -63,12 +72,12 @@ const executives = [
   {
     name: 'Anmol Sharma',
     position: 'Director of Publicity',
-    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    image: anmolSharma,
   },
   {
     name: 'Hayley Huang',
     position: 'Director of Publicity',
-    image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+    image: hayleyHuang,
   },
 ]
 
@@ -89,16 +98,10 @@ function Team() {
         <div className="team-grid">
           {executives.map(({ name, position, image }) => (
             <article className="executive-card" key={name}>
-              <img
-                src={image}
-                alt={`${name} - ${position}`}
-              />
+              <img src={image} alt={`${name} - ${position}`} />
 
               <div className="executive-card__details">
-                <p className="executive-card__position">
-                  {position}
-                </p>
-
+                <p className="executive-card__position">{position}</p>
                 <h2>{name}</h2>
               </div>
             </article>

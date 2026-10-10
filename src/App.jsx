@@ -1,3 +1,4 @@
+
 import WhatWeDo from './components/WhatWeDo'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
@@ -6,6 +7,7 @@ import Hero from './components/Hero'
 import Team from './pages/Team'
 import Events from './pages/Events'
 import Gallery from './pages/Gallery'
+import Founders from './pages/Founders'
 import Footer from './components/Footer'
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         />
 
         <Route path="/team" element={<Team />} />
+
+        <Route path="/founders" element={<Founders />} />
 
         <Route path="/events" element={<Events />} />
 
